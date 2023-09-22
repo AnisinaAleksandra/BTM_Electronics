@@ -1,6 +1,7 @@
 import style from "./Main.module.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
 import largeBanner from "../../../assets/images/large-phone.jpg";
+
 const Main = () => {
   // $(window).scroll(function (e) {
   //   parallaxScroll();
