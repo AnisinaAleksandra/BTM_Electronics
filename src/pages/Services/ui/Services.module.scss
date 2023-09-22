@@ -1,0 +1,38 @@
+.Services {
+  padding-top: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  .title_container {
+    position: absolute;
+    margin: 0 auto;
+    top: 100px;
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  .services_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .paralax_container {
+      width: 300px;
+      height: 500px;
+      .usedIphones {
+        height: 300px;
+        inset: 0 !important;
+      }
+    }
+    #usedIphones {
+      width: 200px;
+    }
+    .service_description {
+      max-width: 300px;
+      min-height: 350px;
+      margin-left: 30px;
+    }
+  }
+}
