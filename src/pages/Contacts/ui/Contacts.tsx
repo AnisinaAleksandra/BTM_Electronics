@@ -1,8 +1,8 @@
 import { MapY } from "../../../widget/MapY";
 import style from "./Contacts.module.scss";
-import svgAdress from "../../../assets/images/address.svg";
-import svgPhone from "../../../assets/images/phone.svg";
-import svgEmail from "../../../assets/images/email.svg";
+import svgAdress from "../../../assets/images/icons/address.svg";
+import svgPhone from "../../../assets/images/icons/phone.svg";
+import svgEmail from "../../../assets/images/icons/email.svg";
 import { FormComponent } from "../../../components/FormComponent";
 const Contacts = () => {
   return (

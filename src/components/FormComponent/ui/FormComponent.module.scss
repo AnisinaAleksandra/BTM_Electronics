@@ -1,2 +1,62 @@
 .Form {
+  width: 450px;
+  height: 450px;
+  margin-left: 30px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 10px;
+  .form_container {
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
+    padding: 30px;
+    height: 450px;
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      border: 1px solid black;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: none;
+      font-size: 14px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+    textarea {
+      height: 150px;
+    }
+    .button {
+      a.animatedButton {
+        padding: 10px 15px;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border: 2px solid #f7ca18;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+        &:hover {
+          color: #000 !important;
+          background-color: transparent;
+          text-shadow: nthree;
+        }
+        &:hover:before {
+          left: 0%;
+          right: auto;
+          width: 100%;
+        }
+        &:before {
+          display: block;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          height: 100%;
+          width: 0px;
+          z-index: -1;
+          content: "";
+          color: #000 !important;
+          background: #f7ca18;
+          transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+        }
+      }
+    }
+  }
 }
