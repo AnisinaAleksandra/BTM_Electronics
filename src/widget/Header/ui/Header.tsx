@@ -30,6 +30,15 @@ const Header = () => {
             <li className={style.menu_item}>Contacts</li>
           </ul>
         </nav>
+        <div className={style.btns_container}>
+          <a className={style.whatsapp} href="https://wa.me/971585987809">
+            WhatsApp
+          </a>
+
+          <a className={style.telegram} href="https://t.me/btmelectronics">
+            Telegram
+          </a>
+        </div>
       </div>
     </div>
   );

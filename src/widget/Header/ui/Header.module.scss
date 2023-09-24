@@ -65,5 +65,32 @@
         }
       }
     }
+
+    .btns_container {
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      a {
+        width: 130px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: aliceblue;
+      }
+      .whatsapp {
+        background-color: #259932;
+        &:hover {
+          background-color: #2d7836;
+        }
+      }
+      .telegram {
+        margin-left: 10px;
+        background-color: #3788f2;
+        &:hover {
+          background-color: #2c6abc;
+        }
+      }
+    }
   }
 }
