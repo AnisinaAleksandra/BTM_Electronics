@@ -2,10 +2,10 @@ import style from "./About.module.scss";
 import { ParallaxBanner } from "react-scroll-parallax";
 import largeBanner from "../../../assets/images/large-phone.jpg";
 import logo from "../../../assets/images/logo.png";
-import dysonLogo from "../../../assets/images/dyson.png";
-import appleLogo from "../../../assets/images/appleLogo.png";
-import miLogo from "../../../assets/images/miLogo.png";
-import playStationLogo from "../../../assets/images/playstationlogo.png";
+import dysonLogo from "../../../assets/images/Brands/Dyson.png";
+import appleLogo from "../../../assets/images/Brands/Apple.png";
+import miLogo from "../../../assets/images/Brands/Xiaomi.png";
+import playStationLogo from "../../../assets/images/Brands/SonyPlaystation.png";
 
 const About = () => {
   return (

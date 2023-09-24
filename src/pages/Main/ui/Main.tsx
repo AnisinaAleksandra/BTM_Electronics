@@ -24,10 +24,7 @@ const Main = () => {
         style={{ inset: "0 0" }}
       >
         <div className={style.text_main}>
-          <h1>
-            We will find an iPhone anywhere in the world and deliver it
-            throughout Russia at the best prices.
-          </h1>
+          <h1>Welcome to BTM Electronics Your trusted wholesale partner</h1>
           {/* <div className="wrapper">
             <span className="scroll-text">
               <span className="fl y3">H</span>

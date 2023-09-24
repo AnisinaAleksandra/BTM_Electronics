@@ -25,8 +25,8 @@ const Header = () => {
         <nav className={style.menu}>
           <ul>
             <li className={style.menu_item}>Main</li>
-            <li className={style.menu_item}>About</li>
-            <li className={style.menu_item}>Delivery</li>
+            <li className={style.menu_item}>Our Services</li>
+            <li className={style.menu_item}>About Us</li>
             <li className={style.menu_item}>Contacts</li>
           </ul>
         </nav>

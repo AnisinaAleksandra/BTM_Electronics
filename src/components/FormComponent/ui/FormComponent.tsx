@@ -18,6 +18,8 @@ const FormComponent = () => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    console.log(formData.name);
+
     alert(
       `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
     );
@@ -60,10 +62,7 @@ const FormComponent = () => {
         />
 
         <div className={style.button}>
-          {" "}
-          <a href="#" className={style.animatedButton}>
-            Register
-          </a>{" "}
+          <button className={style.animatedButton}>Send Message</button>
         </div>
       </form>
     </div>
