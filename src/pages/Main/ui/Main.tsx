@@ -24,7 +24,10 @@ const Main = () => {
         style={{ inset: "0 0" }}
       >
         <div className={style.text_main}>
-          <h1>Welcome to BTM Electronics Your trusted wholesale partner</h1>
+          <h1>
+            Welcome to <span>BTM Electronics</span>
+          </h1>
+          <h1> Your trusted wholesale partner</h1>
           {/* <div className="wrapper">
             <span className="scroll-text">
               <span className="fl y3">H</span>

@@ -14,10 +14,8 @@ const Contacts = () => {
             <img src={svgAdress} />
           </div>
           <div className={style.description}>
-            <div className={style.title_card}>Our adress</div>
-            <div className={style.text_card}>
-              Dubai Airport Free Zone, 9WA G077
-            </div>
+            <div className={style.title_card}>Our address</div>
+            <div className={style.text_card}>Dubai Airport Free Zone</div>
           </div>
         </div>
         <div className={style.info_card}>
@@ -26,7 +24,7 @@ const Contacts = () => {
           </div>
           <div className={style.description}>
             <div className={style.title_card}>Our email</div>
-            <div className={style.text_card}>btmelectronics@gmail.com</div>
+            <div className={style.text_card}>btmelectronics7@gmail.com</div>
           </div>
         </div>
         <div className={style.info_card}>
@@ -35,8 +33,7 @@ const Contacts = () => {
           </div>
           <div className={style.description}>
             <div className={style.title_card}>Our phone</div>
-            <div className={style.text_card}>+995591052466</div>
-            <div className={style.text_card}> @usediphonesforsale</div>
+            <div className={style.text_card}>+971585987809</div>
           </div>
         </div>
       </div>

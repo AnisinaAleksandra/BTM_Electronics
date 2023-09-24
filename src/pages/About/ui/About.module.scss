@@ -30,7 +30,7 @@
           width: 244px;
         }
         .shaped {
-          height: 90%;
+          height: 100%;
           width: 40%;
           float: left;
           display: flex;
@@ -60,6 +60,7 @@
 
   .logo_container {
     background-color: rgb(189, 241, 228);
+    padding: 15px;
     .container {
       display: flex;
       align-items: center;
@@ -70,10 +71,13 @@
           margin-left: 0px;
         }
         #appleLogo {
-          width: 70px;
+          width: 65px;
+        }
+        #dysonLogo {
+          width: 150px;
         }
         img {
-          width: 90px;
+          width: 65px;
         }
       }
     }

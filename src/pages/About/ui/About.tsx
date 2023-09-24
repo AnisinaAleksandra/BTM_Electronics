@@ -6,7 +6,7 @@ import dysonLogo from "../../../assets/images/Brands/Dyson.png";
 import appleLogo from "../../../assets/images/Brands/Apple.png";
 import miLogo from "../../../assets/images/Brands/Xiaomi.png";
 import playStationLogo from "../../../assets/images/Brands/SonyPlaystation.png";
-
+import googleLogo from "../../../assets/images/Brands/Google.png";
 const About = () => {
   return (
     <div className={style.About}>
@@ -51,16 +51,19 @@ const About = () => {
       <div className={style.logo_container}>
         <div className={style.container}>
           <div className={style.logo_item}>
-            <img src={dysonLogo} alt="dyson" />
+            <img src={appleLogo} alt="apple" id={style.appleLogo} />
           </div>
           <div className={style.logo_item}>
-            <img src={appleLogo} alt="apple" id={style.appleLogo} />
+            <img src={googleLogo} alt="google" />
           </div>
           <div className={style.logo_item}>
             <img src={miLogo} alt="mi" />
           </div>
           <div className={style.logo_item}>
-            <img src={playStationLogo} alt="dyson" />
+            <img src={playStationLogo} alt="ps" />
+          </div>
+          <div className={style.logo_item}>
+            <img src={dysonLogo} alt="dyson" id={style.dysonLogo} />
           </div>
         </div>
       </div>
