@@ -24,7 +24,11 @@ const Contacts = () => {
           </div>
           <div className={style.description}>
             <div className={style.title_card}>Our email</div>
-            <div className={style.text_card}>btmelectronics7@gmail.com</div>
+            <div className={style.text_card}>
+              <a href="mailto:btmelectronics7@gmail.com">
+                btmelectronics7@gmail.com
+              </a>
+            </div>
           </div>
         </div>
         <div className={style.info_card}>
