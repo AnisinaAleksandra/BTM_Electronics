@@ -7,6 +7,8 @@ import appleLogo from "../../../assets/images/Brands/Apple.png";
 import miLogo from "../../../assets/images/Brands/Xiaomi.png";
 import playStationLogo from "../../../assets/images/Brands/SonyPlaystation.png";
 import googleLogo from "../../../assets/images/Brands/Google.png";
+import samsungLogo from "../../../assets/images/Brands/Samsung.png";
+
 const About = () => {
   return (
     <div className={style.About}>
@@ -53,6 +55,10 @@ const About = () => {
           <div className={style.logo_item}>
             <img src={appleLogo} alt="apple" id={style.appleLogo} />
           </div>
+          <div className={style.logo_item}>
+            <img src={samsungLogo} alt="samsung" id={style.samsungLogo} />
+          </div>
+
           <div className={style.logo_item}>
             <img src={googleLogo} alt="google" />
           </div>
