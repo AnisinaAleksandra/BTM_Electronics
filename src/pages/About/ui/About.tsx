@@ -40,11 +40,11 @@ const About = () => {
             <div className={style.content}>
               <div className={style.title}>About Us</div>
               <div className={style.text}>
-                BTM Electronics is a family owned and operated company, we offer
-                more than 25 years of experience in the electronics industry. We
-                assure quality and efficient service at the right price.“For
-                existing systems and latest in technology, please reach out to
-                us”.
+                Our company was formed as a result of the merger of two teams
+                with great experience in sales and purchasing. Out target is
+                fulfilling different requirement of our customers regardless of
+                scale and diversity with competitive prices and efficient
+                deliveries.
               </div>
             </div>
           </div>

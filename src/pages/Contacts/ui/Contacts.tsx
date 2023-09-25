@@ -4,6 +4,7 @@ import svgAdress from "../../../assets/images/icons/address.svg";
 import svgPhone from "../../../assets/images/icons/phone.svg";
 import svgEmail from "../../../assets/images/icons/email.svg";
 import { FormComponent } from "../../../components/FormComponent";
+import { MapGoogle } from "../../../widget/MapGoogle";
 const Contacts = () => {
   return (
     <div className={style.Contacts}>

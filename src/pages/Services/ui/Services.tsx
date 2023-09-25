@@ -23,10 +23,7 @@ const Services = () => {
           </ParallaxBanner>
         </div>
         <div className={style.service_description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo a vero
-          iure! Similique aperiam labore at aut. Maxime, suscipit voluptatem
-          inventore excepturi voluptatibus commodi illo beatae consectetur.
-          Aperiam, consequuntur dolor?
+          We supply branded consumer electronics around the world.
         </div>
       </div>
       <div className={style.services_item}>
@@ -44,10 +41,7 @@ const Services = () => {
           </ParallaxBanner>
         </div>
         <div className={style.service_description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo a vero
-          iure! Similique aperiam labore at aut. Maxime, suscipit voluptatem
-          inventore excepturi voluptatibus commodi illo beatae consectetur.
-          Aperiam, consequuntur dolor?
+          We provide fastest and affordable logistics by safest routes.
         </div>
       </div>
     </div>

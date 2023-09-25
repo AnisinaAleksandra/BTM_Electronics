@@ -1,5 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import style from "./FormComponent.module.scss";
+import { sendNotification } from "../../../shared/utils/telegram";
+// import validator from "validator";
 
 const FormComponent = () => {
   const [formData, setFormData] = useState({
@@ -8,18 +10,53 @@ const FormComponent = () => {
     phone: "",
     message: "",
   });
-
+  // const [isError, setIsError] = useState({
+  //   name: "",
+  //   error: false,
+  // });
   const handleChange = (
     event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
+    // if (!/[^A-Za-z]/gi.test(formData.name)) {
+    //   setIsError((prev) => ({
+    //     ...prev,
+    //     error: true,
+    //   }));
+    // }
+    //  if (/[^A-Za-z]/gi.test(formData.name)) {
+    //    setIsError((prev) => ({
+    //      ...prev,
+    //      name: "",
+    //      error: false,
+    //    }));
+    //  }
+    // if (!validator.isEmail(formData.email)) {
+    //   setIsError((prev) => ({
+    //     ...prev,
+    //     ["error"]: true,
+    //   }));
+    // }
+    // if (validator.isEmail(formData.email)) {
+    //   setIsError((prev) => ({
+    //     ...prev,
+    //     name: 'email',
+    //     error: false,
+    //   }));
+    // }
+    // if (!validator.isMobilePhone(formData.phone)) {
+    //   setIsError((prev) => ({
+    //     ...prev,
+    //     ["error"]: true,
+    //   }));
+    // }
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formData.name);
-
+    const textMessage: string = `${formData.name}, ${formData.phone},${formData.email},${formData.message}`;
+    sendNotification(textMessage, "html");
     alert(
       `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
     );
