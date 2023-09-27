@@ -1,5 +1,6 @@
 .Services {
   padding-top: 170px;
+  padding-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@
     justify-content: center;
     .paralax_container {
       width: 300px;
-      height: 500px;
+      height: 370px;
       .usedIphones {
         height: 300px;
         inset: 0 !important;
@@ -31,8 +32,9 @@
     }
     .service_description {
       max-width: 300px;
-      min-height: 350px;
+      height: 370px;
       margin-left: 30px;
+      padding-top: 10%;
     }
   }
 }
