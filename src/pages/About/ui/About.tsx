@@ -11,7 +11,7 @@ import samsungLogo from "../../../assets/images/Brands/Samsung.png";
 
 const About = () => {
   return (
-    <div className={style.About}>
+    <div className={style.About} id="about">
       <ParallaxBanner
         id={style.aboutBanner}
         layers={[{ image: `${largeBanner}`, speed: -15 }]}

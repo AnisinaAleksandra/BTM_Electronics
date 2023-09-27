@@ -4,7 +4,7 @@ import iphoneImg from "../../../assets/images/appleel.jpg";
 import iphoneImgtwo from "../../../assets/images/macProInBlack.jpg";
 const Services = () => {
   return (
-    <div className={style.Services}>
+    <div className={style.Services} id="services">
       <div className={style.title_container}>
         <h1 className={style.title}>Our Services</h1>
       </div>

@@ -6,7 +6,7 @@ import svgEmail from "../../../assets/images/icons/email.svg";
 import { FormComponent } from "../../../components/FormComponent";
 const Contacts = () => {
   return (
-    <div className={style.Contacts}>
+    <div className={style.Contacts} id="contacts">
       <div className={style.title}>Contact Us</div>
       <div className={style.info_cards_list}>
         <div className={style.info_card}>

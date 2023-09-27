@@ -16,7 +16,7 @@ const Main = () => {
   //   $(".y6").css({ transform: "translate3d(0," + scrolled * -0.6 + "px, 0)" });
   // }
   return (
-    <div className={style.Main}>
+    <div className={style.Main} id="main">
       <ParallaxBanner
         id={style.firstBanner}
         layers={[{ image: `${largeBanner}`, speed: -15 }]}

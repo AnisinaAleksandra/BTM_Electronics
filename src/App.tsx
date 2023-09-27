@@ -4,6 +4,7 @@ import { Header } from "./widget/Header";
 import { Services } from "./pages/Services";
 import { About } from "./pages/About";
 import { Contacts } from "./pages/Contacts";
+import Footer from "./widget/Footer/ui/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <About />
       <Contacts />
+      <Footer />
     </>
   );
 }

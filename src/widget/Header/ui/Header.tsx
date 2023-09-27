@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 import style from "./Header.module.scss";
 import logoPath from "../../../assets/images/BTMLogo.png";
 const Header = () => {
@@ -20,14 +22,60 @@ const Header = () => {
     <div className={style.Header}>
       <div className={style.container}>
         <div className={style.logo_container}>
-          <img src={logoPath} alt="logoPath" />
+          <img src={logoPath} alt="logo" />
         </div>
         <nav className={style.menu}>
           <ul>
-            <li className={style.menu_item}>Main</li>
-            <li className={style.menu_item}>Our Services</li>
-            <li className={style.menu_item}>About Us</li>
-            <li className={style.menu_item}>Contacts</li>
+            <li className={style.menu_item}>
+              {" "}
+              <Link
+                activeClass="active"
+                to="main"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Main
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              <Link
+                activeClass="active"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Our Services
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              {" "}
+              <Link
+                activeClass="active"
+                to="contacts"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contacts
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className={style.btns_container}>
