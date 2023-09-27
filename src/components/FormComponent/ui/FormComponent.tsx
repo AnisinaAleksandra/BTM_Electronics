@@ -1,108 +1,122 @@
-import { ChangeEvent, FormEvent, useState } from "react";
 import style from "./FormComponent.module.scss";
-import { sendNotification } from "../../../shared/utils/telegram";
-// import validator from "validator";
+import { useForm } from "react-hook-form";
+import { AnyObject } from "@pbe/react-yandex-maps/typings/util/typing";
 
 const FormComponent = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
-  // const [isError, setIsError] = useState({
-  //   name: "",
-  //   error: false,
-  // });
-  const handleChange = (
-    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    const { name, value } = event.target;
-    // if (!/[^A-Za-z]/gi.test(formData.name)) {
-    //   setIsError((prev) => ({
-    //     ...prev,
-    //     error: true,
-    //   }));
-    // }
-    //  if (/[^A-Za-z]/gi.test(formData.name)) {
-    //    setIsError((prev) => ({
-    //      ...prev,
-    //      name: "",
-    //      error: false,
-    //    }));
-    //  }
-    // if (!validator.isEmail(formData.email)) {
-    //   setIsError((prev) => ({
-    //     ...prev,
-    //     ["error"]: true,
-    //   }));
-    // }
-    // if (validator.isEmail(formData.email)) {
-    //   setIsError((prev) => ({
-    //     ...prev,
-    //     name: 'email',
-    //     error: false,
-    //   }));
-    // }
-    // if (!validator.isMobilePhone(formData.phone)) {
-    //   setIsError((prev) => ({
-    //     ...prev,
-    //     ["error"]: true,
-    //   }));
-    // }
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
+  console.log(errors);
+  const handleSubmitForm = (data: AnyObject) => {
+    console.log(errors, data);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const textMessage: string = `${formData.name}, ${formData.phone},${formData.email},${formData.message}`;
-    sendNotification(textMessage, "html");
-    alert(
-      `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
-    );
+    // const textMessage: string = `${formData.name}, ${formData.phone},${formData.email},${formData.message}`;
+    // sendNotification(textMessage, "html");
   };
 
   return (
     <div className={style.Form}>
-      <form className={style.form_container} onSubmit={handleSubmit}>
+      <form
+        className={style.form_container}
+        onSubmit={handleSubmit((data) => handleSubmitForm(data))}
+      >
         <input
           type="text"
           id="name"
-          name="name"
+          {...register("name", {
+            required: "Name is required",
+            minLength: { value: 3, message: "Min lenght is 3" },
+          })}
+          style={{ borderColor: errors.name?.message ? "#ff9a9a" : "#bef0e4" }}
           placeholder="Your name"
-          value={formData.name}
-          onChange={handleChange}
         />
+        <span className={style.errorMessage}>{errors.name?.message}</span>
+
         <input
           type="email"
           id="email"
-          name="email"
-          value={formData.email}
+          {...register("email", {
+            required: "Email Address is required",
+            pattern:
+              // eslint-disable-next-line no-useless-escape
+              /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+          })}
+          style={{
+            borderColor:
+              errors.email?.type || errors.email?.message
+                ? "#ff9a9a"
+                : "#bef0e4",
+          }}
           placeholder="Your email"
-          onChange={handleChange}
         />
+        <span className={style.errorMessage}>{errors.email?.message}</span>
+        {errors.email?.type && !errors.email?.message ? (
+          <span className={style.errorMessage}>Email is not correct</span>
+        ) : (
+          ""
+        )}
         <input
           type="tel"
           id="phone"
-          name="phone"
-          value={formData.phone}
+          {...register("phone", { required: "Phone is required" })}
           placeholder="Your phone"
-          onChange={handleChange}
+          style={{ borderColor: errors.phone?.message ? "#ff9a9a" : "#bef0e4" }}
         />
-
-        <textarea
-          id="message"
-          placeholder="Message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-        />
+        <span className={style.errorMessage}>{errors.phone?.message}</span>
+        <textarea id="message" placeholder="Message" {...register("message")} />
 
         <div className={style.button}>
-          <button className={style.animatedButton}>Send Message</button>
+          <button
+            className={style.animatedButton}
+            disabled={Object.keys(errors).length !== 0}
+          >
+            Send Message
+          </button>
         </div>
       </form>
     </div>
   );
 };
 export default FormComponent;
+
+// if (!/[^A-Za-z]/gi.test(formData.name)) {
+//   setIsError((prev) => ({
+//     ...prev,
+//     error: true,
+//   }));
+// }
+//  if (/[^A-Za-z]/gi.test(formData.name)) {
+//    setIsError((prev) => ({
+//      ...prev,
+//      name: "",
+//      error: false,
+//    }));
+//  }
+// if (!validator.isEmail(formData.email)) {
+//   setIsError((prev) => ({
+//     ...prev,
+//     ["error"]: true,
+//   }));
+// }
+// if (validator.isEmail(formData.email)) {
+//   setIsError((prev) => ({
+//     ...prev,
+//     name: 'email',
+//     error: false,
+//   }));
+// }
+// if (!validator.isMobilePhone(formData.phone)) {
+//   setIsError((prev) => ({
+//     ...prev,
+//     ["error"]: true,
+//   }));
+// }

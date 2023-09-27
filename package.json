@@ -14,6 +14,7 @@
     "google-map-react": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.2",
     "react-scroll-parallax": "^3.4.2",
     "validator": "^13.11.0"
   },

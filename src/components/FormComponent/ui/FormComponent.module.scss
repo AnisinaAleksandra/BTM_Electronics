@@ -8,6 +8,12 @@
     padding: 30px;
     height: 450px;
     background-color: #696969;
+    .errorMessage {
+      display: block;
+      text-align: end;
+      color: #ff9a9a;
+      text-decoration: underline;
+    }
     input,
     textarea {
       display: block;
@@ -16,26 +22,38 @@
       border-radius: 5px;
       box-shadow: none;
       font-size: 14px;
-      background: aliceblue;
+      color: white;
       border: 2px solid #bef0e4;
-
-      &:not(:last-child) {
-        margin-bottom: 16px;
+      &::placeholder {
+        color: #bef0e4;
+      }
+      &:not(:first-child) {
+        margin-top: 16px;
       }
     }
     textarea {
       height: 150px;
+      color: white;
+      font-weight: 400;
+      &:focus {
+        outline: none;
+      }
     }
     .button {
-      background: #106eea;
-      border: 0;
-      padding: 10px 30px;
-      color: #fff;
-      transition: 0.4s;
-      border-radius: 4px;
-      text-align: center;
-      width: 200px;
+      padding-top: 30px;
+
       margin: 0 auto;
+      width: 200px;
+      .animatedButton {
+        width: 100%;
+        background: #106eea;
+        border: 0;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px;
+        text-align: center;
+        padding: 10px 30px;
+      }
     }
   }
 }
