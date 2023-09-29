@@ -36,7 +36,7 @@ const Header = () => {
           <img src={logoPath} alt="logo" />
         </div>
         <nav
-          className={style.menu}
+          className={style.menu_mobile}
           style={{ transform: open ? "translateX(0)" : "translateX(150%)" }}
         >
           <ul>
@@ -92,7 +92,60 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-
+        <nav className={style.menu_brouser}>
+          <ul>
+            <li className={style.menu_item}>
+              {" "}
+              <Link
+                activeClass="active"
+                to="main"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Main
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              <Link
+                activeClass="active"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Our Services
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className={style.menu_item}>
+              {" "}
+              <Link
+                activeClass="active"
+                to="contacts"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contacts
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <div className={style.burger_container} onClick={openMenu}>
           <input
             className={style.checkbox}

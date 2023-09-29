@@ -49,3 +49,47 @@ p {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
+@media only screen and (max-width: 820px) {
+  .Main {
+    #firstBanner {
+      height: 400px;
+      .text_main {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 656px) {
+  .Main {
+    #firstBanner {
+      height: 350px;
+      .text_main {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Main {
+    #firstBanner {
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        background-position: left !important;
+      }
+      .text_main {
+        height: 200px;
+        background-color: rgb(204 204 204 / 49%);
+        font-size: 30px;
+        position: relative;
+        width: 100%;
+        font-weight: bolder;
+      }
+    }
+  }
+}

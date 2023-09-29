@@ -113,3 +113,17 @@ p {
   left: 50%;
   transform: translate(-50%, 0);
 }
+
+@media screen and (max-width: 820px) {
+  .About {
+    #aboutBanner {
+      .text_main {
+        #text_container {
+          .logo {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
