@@ -25,7 +25,7 @@ const About = () => {
           className={style.text_main}
           style={{
             transform: "scaleX(-1)",
-            width: "100%",
+            width: "95%",
             height: "97%",
             display: "flex",
             alignItems: "center",
