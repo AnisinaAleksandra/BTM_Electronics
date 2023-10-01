@@ -117,10 +117,25 @@ p {
 @media screen and (max-width: 820px) {
   .About {
     #aboutBanner {
+      height: 370px;
       .text_main {
         #text_container {
-          .logo {
-            display: none;
+          height: 75%;
+          .shaped {
+            width: 0;
+            .logo {
+              display: none;
+            }
+          }
+
+          .content {
+            padding: 15px;
+            .title {
+              font-size: 25px;
+            }
+            .text {
+              font-size: 20px;
+            }
           }
         }
       }

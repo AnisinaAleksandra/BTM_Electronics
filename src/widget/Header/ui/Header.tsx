@@ -2,6 +2,8 @@ import { Link } from "react-scroll";
 
 import style from "./Header.module.scss";
 import logoPath from "../../../assets/images/BTMLogo.png";
+import whatsapIcon from "../../../assets/images/icons/whatsapp.png";
+import telegramIcon from "../../../assets/images/icons/telegram.png";
 import classNames from "classnames/bind";
 import { useState } from "react";
 
@@ -163,9 +165,15 @@ const Header = () => {
           <a className={style.whatsapp} href="https://wa.me/971585987809">
             WhatsApp
           </a>
-
           <a className={style.telegram} href="https://t.me/btmelectronics">
             Telegram
+          </a>
+
+          <a className={style.chatsBtn} href="https://wa.me/971585987809">
+            <img src={whatsapIcon} alt="whatsapLogo" />
+          </a>
+          <a className={style.chatsBtn} href="https://t.me/btmelectronics">
+            <img src={telegramIcon} alt="telegramLogo" />
           </a>
         </div>
       </div>
