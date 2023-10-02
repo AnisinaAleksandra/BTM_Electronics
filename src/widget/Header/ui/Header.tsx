@@ -5,7 +5,7 @@ import logoPath from "../../../assets/images/BTMLogo.png";
 import whatsapIcon from "../../../assets/images/icons/whatsapp.png";
 import telegramIcon from "../../../assets/images/icons/telegram.png";
 import classNames from "classnames/bind";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const cx = classNames.bind(style);
 
