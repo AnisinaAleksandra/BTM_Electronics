@@ -23,12 +23,10 @@ const Contacts = () => {
             <img src={svgEmail} />
           </div>
           <div className={style.description}>
-            <div className={style.title_card}>Our email</div>
-            <div className={style.text_card}>
-              <a href="mailto:btmelectronics7@gmail.com">
-                btmelectronics7@gmail.com
-              </a>
-            </div>
+            <a href="mailto:btmelectronics7@gmail.com">
+              <div className={style.title_card}>Our email</div>
+              <div className={style.text_card}>btmelectronics7@gmail.com</div>
+            </a>
           </div>
         </div>
         <div className={style.info_card}>
