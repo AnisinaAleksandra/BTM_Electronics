@@ -5,12 +5,14 @@ import logoPath from "../../../assets/images/BTMLogo.png";
 import whatsapIcon from "../../../assets/images/icons/whatsapp.png";
 import telegramIcon from "../../../assets/images/icons/telegram.png";
 import classNames from "classnames/bind";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const cx = classNames.bind(style);
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
   document.querySelectorAll("li").forEach((elem) => {
     elem.onmouseenter = elem.onmouseleave = (e) => {
       const tolerance = 10;
@@ -29,6 +31,16 @@ const Header = () => {
 
   const openMenu = (): void => {
     setOpen((prev) => !prev);
+    console.log(open);
+
+    if (open === false) {
+      if (ref.current) ref.current.style.height = "100vh";
+    }
+    if (open) {
+      setTimeout(() => {
+        if (ref.current) ref.current.style.height = "unset";
+      }, 1500);
+    }
   };
 
   return (
@@ -39,7 +51,10 @@ const Header = () => {
         </div>
         <nav
           className={style.menu_mobile}
-          style={{ transform: open ? "translateX(0)" : "translateX(150%)" }}
+          ref={ref}
+          style={{
+            transform: open ? "translateX(0)" : "translateX(150%)",
+          }}
         >
           <ul>
             <li className={style.menu_item}>
@@ -51,6 +66,7 @@ const Header = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={openMenu}
               >
                 Main
               </Link>
@@ -63,6 +79,7 @@ const Header = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={openMenu}
               >
                 Our Services
               </Link>
@@ -75,6 +92,7 @@ const Header = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                onClick={openMenu}
               >
                 About Us
               </Link>
@@ -82,6 +100,7 @@ const Header = () => {
             <li className={style.menu_item}>
               {" "}
               <Link
+                onClick={openMenu}
                 activeClass="active"
                 to="contacts"
                 spy={true}
@@ -151,6 +170,7 @@ const Header = () => {
         <div className={style.burger_container} onClick={openMenu}>
           <input
             className={style.checkbox}
+            checked={open}
             type="checkbox"
             name=""
             id="checkbox"

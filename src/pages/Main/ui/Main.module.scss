@@ -89,6 +89,9 @@ p {
         position: relative;
         width: 100%;
         font-weight: bolder;
+        span {
+          display: block;
+        }
       }
     }
   }

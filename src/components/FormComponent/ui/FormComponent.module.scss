@@ -7,6 +7,7 @@
     border-radius: 10px;
     padding: 30px;
     background-color: #696969;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
     .errorMessage {
       display: block;
       text-align: end;
@@ -66,8 +67,7 @@
 @media only screen and (max-width: 412px) {
   .Form {
     width: 90vw;
-    box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
-    border-radius: 10px;
+
     .form_container {
       padding: 20px;
     }

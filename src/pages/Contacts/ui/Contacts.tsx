@@ -36,8 +36,11 @@ const Contacts = () => {
             <img src={svgPhone} />
           </div>
           <div className={style.description}>
-            <div className={style.title_card}>Our phone</div>
-            <div className={style.text_card}>+971585987809</div>
+            <a href="tel:+971585987809">
+              {" "}
+              <div className={style.title_card}>Our phone</div>
+              <div className={style.text_card}>+971585987809</div>
+            </a>
           </div>
         </div>
       </div>
