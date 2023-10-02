@@ -15,7 +15,6 @@ const FormComponent = () => {
       message: "",
     },
   });
-  console.log(errors);
   const handleSubmitForm = (data: AnyObject) => {
     console.log(errors, data);
 
@@ -24,7 +23,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div className={style.Form}>
+    <div className={style.Form} data-aos="fade-up-left">
       <form
         className={style.form_container}
         onSubmit={handleSubmit((data) => handleSubmitForm(data))}

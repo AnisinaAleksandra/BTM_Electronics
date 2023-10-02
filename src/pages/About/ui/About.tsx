@@ -33,11 +33,15 @@ const About = () => {
           }}
         >
           <div id={style.text_container}>
-            <div className={style.shaped}>
+            <div className={style.shaped} data-aos="fade-left">
               <img className={style.logo} src={logo}></img>
             </div>
-
-            <div className={style.content}>
+            <div
+              className={style.content}
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
               <div className={style.title}>About Us</div>
               <div className={style.text}>
                 Our company was formed as a result of the merger of two teams

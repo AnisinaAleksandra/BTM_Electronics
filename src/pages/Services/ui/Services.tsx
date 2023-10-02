@@ -1,11 +1,13 @@
-import style from "./Services.module.scss";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
+
+import style from "./Services.module.scss";
 import iphoneImg from "../../../assets/images/appleel.jpg";
 import iphoneImgtwo from "../../../assets/images/macProInBlack.jpg";
+
 const Services = () => {
   return (
     <div className={style.Services} id="services">
-      <div className={style.title_container}>
+      <div className={style.title_container} data-aos="fade-right">
         <h1 className={style.title}>Our Services</h1>
       </div>
       <div className={style.services_item}>

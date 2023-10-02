@@ -2,7 +2,7 @@ import { Map, Placemark, YMaps, ZoomControl } from "@pbe/react-yandex-maps";
 import style from "./Map.module.scss";
 export const MapY = () => {
   return (
-    <div id="map">
+    <div id="map" data-aos="fade-up-right">
       <YMaps query={{ lang: "en_US" }}>
         <Map
           // width="50%"
