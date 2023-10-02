@@ -30,16 +30,17 @@ const Header = () => {
   });
 
   const openMenu = (): void => {
-    setOpen((prev) => !prev);
-    console.log(open);
-
-    if (open === false) {
-      if (ref.current) ref.current.style.height = "100vh";
-    }
     if (open) {
+      if (ref.current) ref.current.style.display = "none";
       setTimeout(() => {
-        if (ref.current) ref.current.style.height = "unset";
-      }, 1500);
+        setOpen(false);
+      }, 0);
+    }
+    if (open === false) {
+      if (ref.current) ref.current.style.display = "flex";
+      setTimeout(() => {
+        setOpen(true);
+      }, 0);
     }
   };
 
