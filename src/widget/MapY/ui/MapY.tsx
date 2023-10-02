@@ -1,15 +1,14 @@
 import { Map, Placemark, YMaps, ZoomControl } from "@pbe/react-yandex-maps";
 import style from "./Map.module.scss";
 export const MapY = () => {
-  console.log(style.Map);
-
   return (
     <div id="map">
       <YMaps query={{ lang: "en_US" }}>
         <Map
-          width="600px"
-          height="450px"
-          // style={style.Map}
+          // width="50%"
+          // height="450px"
+          // borderRadius="10px"
+          style={{ borderRadius: "10px", width: "100%", height: "445px" }}
           className={style.Map}
           defaultState={{
             center: [25.27241, 55.37508],

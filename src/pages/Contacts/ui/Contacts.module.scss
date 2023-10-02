@@ -49,6 +49,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap-reverse;
+    .map {
+      width: 400px;
+    }
   }
 }
 
@@ -60,6 +63,9 @@
       margin: 0 auto;
     }
     .map_message_form {
+      .map {
+        width: 350px;
+      }
     }
   }
 }
