@@ -8,7 +8,9 @@ import Footer from "./widget/Footer/ui/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 function App() {
-  AOS.init();
+  AOS.init({
+    once: true,
+  });
 
   return (
     <>
