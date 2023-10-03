@@ -86,36 +86,3 @@ const FormComponent = () => {
   );
 };
 export default FormComponent;
-
-// if (!/[^A-Za-z]/gi.test(formData.name)) {
-//   setIsError((prev) => ({
-//     ...prev,
-//     error: true,
-//   }));
-// }
-//  if (/[^A-Za-z]/gi.test(formData.name)) {
-//    setIsError((prev) => ({
-//      ...prev,
-//      name: "",
-//      error: false,
-//    }));
-//  }
-// if (!validator.isEmail(formData.email)) {
-//   setIsError((prev) => ({
-//     ...prev,
-//     ["error"]: true,
-//   }));
-// }
-// if (validator.isEmail(formData.email)) {
-//   setIsError((prev) => ({
-//     ...prev,
-//     name: 'email',
-//     error: false,
-//   }));
-// }
-// if (!validator.isMobilePhone(formData.phone)) {
-//   setIsError((prev) => ({
-//     ...prev,
-//     ["error"]: true,
-//   }));
-// }
