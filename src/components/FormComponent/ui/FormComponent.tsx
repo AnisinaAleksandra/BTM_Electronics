@@ -23,7 +23,7 @@ const FormComponent = () => {
   };
 
   return (
-    <div className={style.Form} data-aos="fade-up-left">
+    <div className={style.Form} data-aos="fade-up">
       <form
         className={style.form_container}
         onSubmit={handleSubmit((data) => handleSubmitForm(data))}
