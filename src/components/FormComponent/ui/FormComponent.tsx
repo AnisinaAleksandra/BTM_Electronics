@@ -1,6 +1,8 @@
 import style from "./FormComponent.module.scss";
 import { useForm } from "react-hook-form";
 import { AnyObject } from "@pbe/react-yandex-maps/typings/util/typing";
+import { sendNotification } from "../../../shared/utils/telegram";
+import { useTranslation } from "react-i18next";
 
 const FormComponent = () => {
   const {
@@ -15,11 +17,12 @@ const FormComponent = () => {
       message: "",
     },
   });
-  const handleSubmitForm = (data: AnyObject) => {
-    console.log(errors, data);
 
-    // const textMessage: string = `${formData.name}, ${formData.phone},${formData.email},${formData.message}`;
-    // sendNotification(textMessage, "html");
+  const { t } = useTranslation();
+
+  const handleSubmitForm = (data: AnyObject) => {
+    const textMessage: string = `${data.name}, ${data.phone},${data.email},${data.message}`;
+    sendNotification(textMessage, "html");
   };
 
   return (
@@ -36,7 +39,7 @@ const FormComponent = () => {
             minLength: { value: 3, message: "Min lenght is 3" },
           })}
           style={{ borderColor: errors.name?.message ? "#ff9a9a" : "#bef0e4" }}
-          placeholder="Your name"
+          placeholder={t("Your name")}
         />
         <span className={style.errorMessage}>{errors.name?.message}</span>
 
@@ -55,7 +58,7 @@ const FormComponent = () => {
                 ? "#ff9a9a"
                 : "#bef0e4",
           }}
-          placeholder="Your email"
+          placeholder={t("Your email")}
         />
         <span className={style.errorMessage}>{errors.email?.message}</span>
         {errors.email?.type && !errors.email?.message ? (
@@ -67,18 +70,22 @@ const FormComponent = () => {
           type="tel"
           id="phone"
           {...register("phone", { required: "Phone is required" })}
-          placeholder="Your phone"
+          placeholder={t("Your phone")}
           style={{ borderColor: errors.phone?.message ? "#ff9a9a" : "#bef0e4" }}
         />
         <span className={style.errorMessage}>{errors.phone?.message}</span>
-        <textarea id="message" placeholder="Message" {...register("message")} />
+        <textarea
+          id="message"
+          {...register("message")}
+          placeholder={t("Message")}
+        />
 
         <div className={style.button}>
           <button
             className={style.animatedButton}
             disabled={Object.keys(errors).length !== 0}
           >
-            Send Message
+            {t("Send Message")}
           </button>
         </div>
       </form>

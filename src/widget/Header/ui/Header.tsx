@@ -6,13 +6,15 @@ import whatsapIcon from "../../../assets/images/icons/whatsapp.png";
 import telegramIcon from "../../../assets/images/icons/telegram.png";
 import classNames from "classnames/bind";
 import { useRef, useState } from "react";
+import { LangSwitcher } from "../../LangSwitcher/LangSwitcher";
+import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(style);
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-
+  const { t } = useTranslation();
   document.querySelectorAll("li").forEach((elem) => {
     elem.onmouseenter = elem.onmouseleave = (e) => {
       const tolerance = 10;
@@ -69,7 +71,7 @@ const Header = () => {
                 duration={500}
                 onClick={openMenu}
               >
-                Main
+                {t("Main")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -82,7 +84,7 @@ const Header = () => {
                 duration={500}
                 onClick={openMenu}
               >
-                Our Services
+                {t("Our Services")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -95,7 +97,7 @@ const Header = () => {
                 duration={500}
                 onClick={openMenu}
               >
-                About Us
+                {t("About Us")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -109,10 +111,13 @@ const Header = () => {
                 offset={-70}
                 duration={500}
               >
-                Contacts
+                {t("Contacts")}
               </Link>
             </li>
           </ul>
+          <div className={style.mobileLang}>
+            <LangSwitcher />
+          </div>
         </nav>
         <nav className={style.menu_brouser}>
           <ul>
@@ -126,7 +131,7 @@ const Header = () => {
                 offset={-70}
                 duration={500}
               >
-                Main
+                {t("Main")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -138,7 +143,7 @@ const Header = () => {
                 offset={-70}
                 duration={500}
               >
-                Our Services
+                {t("Our Services")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -150,7 +155,7 @@ const Header = () => {
                 offset={-70}
                 duration={500}
               >
-                About Us
+                {t("About Us")}
               </Link>
             </li>
             <li className={style.menu_item}>
@@ -163,7 +168,7 @@ const Header = () => {
                 offset={-70}
                 duration={500}
               >
-                Contacts
+                {t("Contacts")}
               </Link>
             </li>
           </ul>
@@ -189,13 +194,15 @@ const Header = () => {
           <a className={style.telegram} href="https://t.me/btmelectronics">
             Telegram
           </a>
-
           <a className={style.chatsBtn} href="https://wa.me/971585987809">
             <img src={whatsapIcon} alt="whatsapLogo" />
           </a>
           <a className={style.chatsBtn} href="https://t.me/btmelectronics">
             <img src={telegramIcon} alt="telegramLogo" />
           </a>
+          <div className={style.brouserLang}>
+            <LangSwitcher />
+          </div>
         </div>
       </div>
     </div>

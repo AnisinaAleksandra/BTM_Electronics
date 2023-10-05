@@ -21,6 +21,9 @@
     }
     .menu_mobile {
       display: none;
+      .mobileLang {
+        display: none;
+      }
     }
     .menu_brouser {
       display: grid;
@@ -74,6 +77,10 @@
       border: none;
       border-radius: 5px;
       margin-left: 10px;
+      .brouserLang {
+        display: inline;
+        width: 38px;
+      }
       a {
         width: 130px;
         padding: 10px 15px;
@@ -101,7 +108,7 @@
   }
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1025px) {
   .Header {
     padding: 0;
     .container {
@@ -116,7 +123,7 @@
       }
       .btns_container {
         position: absolute;
-        top: 30px;
+        top: 23px;
         right: 30%;
       }
       .menu_brouser {
@@ -128,10 +135,12 @@
         width: 100vw;
         height: 100vh;
         background-color: #a3a3a3da;
-        // display: flex;
         flex-direction: column;
         transition: transform 0.5s ease-in-out;
         text-align: center;
+        .mobileLang {
+          display: block;
+        }
         ul {
           flex-direction: column;
           li {
@@ -244,12 +253,11 @@
   }
 }
 
-@media only screen and (max-width: 635px) {
+@media only screen and (max-width: 710px) {
   .Header {
     .container {
       .btns_container {
         position: absolute;
-        top: 30px;
         right: 15%;
       }
     }
@@ -293,7 +301,7 @@
   }
 }
 
-@media only screen and (max-width: 495px) {
+@media only screen and (max-width: 527px) {
   .Header {
     .container {
       .logo_container {
@@ -321,6 +329,21 @@
           padding: 0;
           border: 0;
           display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .Header {
+    .container {
+      .logo_container {
+        width: 170px;
+      }
+      .btns_container {
+        .brouserLang {
+          display: none;
         }
       }
     }

@@ -8,8 +8,10 @@ import miLogo from "../../../assets/images/Brands/Xiaomi.png";
 import playStationLogo from "../../../assets/images/Brands/SonyPlaystation.png";
 import googleLogo from "../../../assets/images/Brands/Google.png";
 import samsungLogo from "../../../assets/images/Brands/Samsung.png";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className={style.About} id="about">
       <ParallaxBanner
@@ -42,14 +44,8 @@ const About = () => {
               data-aos-offset="500"
               data-aos-duration="500"
             >
-              <div className={style.title}>About Us</div>
-              <div className={style.text}>
-                Our company was formed as a result of the merger of two teams
-                with great experience in sales and purchasing. Out target is
-                fulfilling different requirement of our customers regardless of
-                scale and diversity with competitive prices and efficient
-                deliveries.
-              </div>
+              <div className={style.title}>{t("About Us")}</div>
+              <div className={style.text}>{t("Our company was formed")}</div>
             </div>
           </div>
         </div>

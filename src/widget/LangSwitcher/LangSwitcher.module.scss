@@ -1,0 +1,16 @@
+.LangSwitcher {
+  margin-left: 15px;
+  width: 40px;
+  vertical-align: middle;
+  img {
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 10px rgb(115, 250, 200);
+    }
+  }
+}
+@media only screen and (max-width: 527px) {
+  .LangSwitcher {
+    vertical-align: unset;
+  }
+}
