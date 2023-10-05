@@ -173,7 +173,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className={style.burger_container} onClick={openMenu}>
+        <div className={style.burger_container} onChange={openMenu}>
           <input
             className={style.checkbox}
             checked={open}
