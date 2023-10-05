@@ -1,7 +1,7 @@
 {
   "mainTitileOne": "Welcome to ",
   "mainTitileTwo": "Your trusted wholesale partner",
-  "language": "src/assets/images/icons/eng.svg",
+  "language": "../../src/assets/images/icons/eng.svg",
   "Main": "Main",
   "Our Services": "Our Services",
   "About Us": "About Us",

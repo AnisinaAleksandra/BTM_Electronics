@@ -138,9 +138,7 @@
         flex-direction: column;
         transition: transform 0.5s ease-in-out;
         text-align: center;
-        .mobileLang {
-          display: block;
-        }
+
         ul {
           flex-direction: column;
           li {
@@ -338,6 +336,11 @@
 @media only screen and (max-width: 425px) {
   .Header {
     .container {
+      .menu_mobile {
+        .mobileLang {
+          display: block;
+        }
+      }
       .logo_container {
         width: 170px;
       }

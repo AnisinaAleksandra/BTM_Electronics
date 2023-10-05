@@ -1,7 +1,7 @@
 {
   "mainTitileOne": "Добро пожаловать в ",
   "mainTitileTwo": "Ваш надежный оптовый партнер",
-  "language": "src/assets/images/icons/rus.svg",
+  "language": "/src/assets/images/icons/rus.svg",
   "Main": "Главная",
   "Our Services": "Услуги",
   "About Us": "О нас",

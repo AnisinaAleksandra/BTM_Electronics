@@ -1,23 +1,285 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<svg version="1.1" x="0px" y="0px"
-	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-<g id="_x31_7">
-	<ellipse style="fill:#FFFFFF;" cx="32.008" cy="32.025" rx="31.992" ry="31.975"/>
-	<path style="fill:#000066;" d="M4.686,28.085l-3.941,2.849c0.211-0.966,0.463-1.917,0.759-2.849H4.686z M35.271,0.166
-		C34.193,0.056,33.099,0,31.992,0c-3.575,0-7.009,0.595-10.22,1.676v8.246L35.271,0.166z M13.907,5.602
-		c-1.003,0.689-1.962,1.436-2.878,2.231l2.878,2.08V5.602z M41.449,3.342V1.422c8.7,2.687,15.808,8.987,19.585,17.143l-1.793-0.674
-		l1.434,2.156l-2.239,1.337l2.594,0.218l-0.355,2.566l1.802-1.87l0.018,0.019c0.965,3.047,1.489,6.291,1.489,9.657
-		c0,17.659-14.323,31.975-31.992,31.975c-17.232,0-31.275-13.619-31.959-30.675l13.874-10.027V33.64h1.584h4.697h1.584V23.238
-		L36.164,33.64h5.284v-2.538v-1.283l-10.442-7.547h10.442v-2.279v-6.824v-2.279H31.006L41.449,3.342z M35.181,53.088l-5.134-3.043
-		l3.318-4.981l-5.598,2.115l-1.843-5.691l-1.83,5.691l-5.598-2.115l3.318,4.981l-5.148,3.043l5.967,0.519l-0.819,5.923l4.11-4.326
-		l4.11,4.326l-0.819-5.923L35.181,53.088z M46.241,35.687l-2.239,1.337l2.594,0.218l-0.341,2.579l1.775-1.897l1.802,1.897
-		l-0.369-2.579l2.594-0.232l-2.239-1.324l1.447-2.156l-2.431,0.914l-0.806-2.47l-0.792,2.47l-2.431-0.914L46.241,35.687z"/>
-	<path style="fill:#D80909;" d="M25.718,10.889h-3.523L36.77,0.356c0.937,0.14,1.858,0.327,2.767,0.546L25.718,10.889z
-		 M20.188,13.169V2.257c-1.635,0.649-3.207,1.423-4.697,2.322v8.59H6.125c-1.528,2.096-2.806,4.385-3.793,6.824h13.16V33.64h4.697
-		V19.992h21.261v-6.824H20.188z M8.756,10.009c-0.273,0.289-0.541,0.582-0.804,0.88h2.022L8.756,10.009z M0.112,29.399
-		C0.044,30.249,0,31.107,0,31.975c0,0.017,0.001,0.033,0.001,0.05l13.496-9.754H9.974L0.112,29.399z M25.718,22.271l15.73,11.368
-		v-2.538l-12.221-8.83H25.718z"/>
-</g>
-<g id="Layer_1">
-</g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    id="svg2881"
+    sodipodi:docname="Flag_of_the_United_Kingdom.svg"
+    version="1.1"
+    inkscape:version="0.47 r22583"
+    viewBox="0 0 9.9513184 10.159361"
+  >
+  <defs
+      id="defs2898"
+    >
+    <linearGradient
+        id="linearGradient2939"
+        inkscape:collect="always"
+      >
+      <stop
+          id="stop2941"
+          style="stop-color:#eeeeee"
+          offset="0"
+      />
+      <stop
+          id="stop2943"
+          style="stop-color:#eeeeee;stop-opacity:0"
+          offset="1"
+      />
+    </linearGradient
+    >
+    <clipPath
+        id="clipPath2917"
+        clipPathUnits="userSpaceOnUse"
+      >
+      <path
+          id="path2919"
+          sodipodi:rx="300"
+          sodipodi:ry="300"
+          style="fill:#aaccee"
+          sodipodi:type="arc"
+          d="m889.24 347.81a300 300 0 1 1 -600 0 300 300 0 1 1 600 0z"
+          transform="matrix(.048805 0 0 .048805 1.2421 -1.9747)"
+          sodipodi:cy="347.80878"
+          sodipodi:cx="589.24304"
+      />
+    </clipPath
+    >
+    <radialGradient
+        id="radialGradient3745"
+        gradientUnits="userSpaceOnUse"
+        cy="89.207"
+        cx="691.64"
+        gradientTransform="matrix(.35888 1.1741 -.97801 .28683 388.55 -507.21)"
+        r="300"
+        inkscape:collect="always"
+      >
+      <stop
+          id="stop2931"
+          style="stop-color:#ededed"
+          offset="0"
+      />
+      <stop
+          id="stop2933"
+          style="stop-color:#ededed"
+          offset="1"
+      />
+    </radialGradient
+    >
+    <radialGradient
+        id="radialGradient3747"
+        xlink:href="#linearGradient2939"
+        gradientUnits="userSpaceOnUse"
+        cy="67.812"
+        cx="598.69"
+        gradientTransform="matrix(-.032747 2.0103 -1.0397 -.016936 667.4 -1016)"
+        r="300"
+        inkscape:collect="always"
+    />
+    <linearGradient
+        id="linearGradient3749"
+        y2="708.76"
+        xlink:href="#linearGradient2939"
+        gradientUnits="userSpaceOnUse"
+        x2="569.52"
+        y1="798.41"
+        x1="571.31"
+        inkscape:collect="always"
+    />
+  </defs
+  >
+  <sodipodi:namedview
+      id="namedview2896"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      guidetolerance="10"
+      pagecolor="#ffffff"
+      gridtolerance="10"
+      inkscape:window-maximized="0"
+      inkscape:zoom="2.3664507"
+      objecttolerance="10"
+      borderopacity="1"
+      inkscape:current-layer="svg2881"
+      inkscape:cx="99.887881"
+      inkscape:cy="130.03442"
+      inkscape:window-y="0"
+      inkscape:window-x="0"
+      inkscape:window-width="1530"
+      showgrid="false"
+      inkscape:pageopacity="0"
+      inkscape:window-height="1039"
+  />
+  <clipPath
+      id="t"
+    >
+    <path
+        id="path2884"
+        d="m30 15h30v15zv15h-30zh-30v-15zv-15h30z"
+    />
+  </clipPath
+  >
+  <g
+      id="g3734"
+      transform="matrix(.29010 0 0 .29010 -3.294 -1.8897)"
+    >
+    <path
+        id="path2915"
+        sodipodi:rx="300"
+        sodipodi:ry="300"
+        style="fill:url(#radialGradient3745)"
+        sodipodi:type="arc"
+        d="m889.24 347.81c0 165.69-134.31 300-300 300s-300-134.31-300-300 134.31-300 300-300 300 134.31 300 300z"
+        transform="matrix(.057171 0 0 .058367 -5.1818 3.7235)"
+        sodipodi:cy="347.80878"
+        sodipodi:cx="589.24304"
+    />
+    <g
+        id="g2904"
+        transform="matrix(1.1241 0 0 1.1241 -5.1939 7.119)"
+        clip-path="url(#clipPath2917)"
+      >
+      <path
+          id="path2886"
+          style="fill:#00247d"
+          d="m0 0v30h60v-30z"
+      />
+      <path
+          id="path2888"
+          style="stroke:#ffffff;stroke-width:6"
+          d="m0 0 60 30m0-30-60 30"
+      />
+      <path
+          id="path2890"
+          style="stroke:#cf142b;stroke-width:4"
+          d="m0 0 60 30m0-30-60 30"
+          clip-path="url(#t)"
+      />
+      <path
+          id="path2892"
+          style="stroke:#ffffff;stroke-width:10"
+          d="m30 0v30m-30-15h60"
+      />
+      <path
+          id="path2894"
+          style="stroke:#cf142b;stroke-width:6"
+          d="m30 0v30m-30-15h60"
+      />
+    </g
+    >
+    <path
+        id="path2913"
+        d="m567.47 165.66c-167.69 0-304.48 132.33-311.66 298.25 138.2 56.192 349.49 93.013 623.06-4.5625-9.4553-163.79-145.25-293.69-311.41-293.69z"
+        style="fill:url(#radialGradient3747)"
+        transform="scale(.05)"
+    />
+    <path
+        id="path2950"
+        sodipodi:rx="128.48605"
+        sodipodi:ry="40.637451"
+        style="opacity:.63556;fill:url(#linearGradient3749)"
+        sodipodi:type="arc"
+        d="m698.01 749.4c0 22.443-57.525 40.637-128.49 40.637-70.961 0-128.49-18.194-128.49-40.637s57.525-40.637 128.49-40.637c70.961 0 128.49 18.194 128.49 40.637z"
+        transform="scale(.05)"
+        sodipodi:cy="749.4024"
+        sodipodi:cx="569.52191"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >United Kingdom Flag</dc:title
+        >
+        <dc:date
+          >2010-08-02T23:09:49</dc:date
+        >
+        <dc:description
+          >Flag of UK</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/76507/united-kingdom-flag-by-shokunin</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >shokunin</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >button</rdf:li
+            >
+            <rdf:li
+              >flag</rdf:li
+            >
+            <rdf:li
+              >union jack</rdf:li
+            >
+            <rdf:li
+              >united kingdom</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
