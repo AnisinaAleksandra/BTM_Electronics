@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { AnyObject } from "@pbe/react-yandex-maps/typings/util/typing";
 import { sendNotification } from "../../../shared/utils/telegram";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const FormComponent = () => {
   const {
@@ -20,75 +21,99 @@ const FormComponent = () => {
 
   const { t } = useTranslation();
 
+  const [messageIsSend, setMessageIsSend] = useState(false);
+  const [message, setMessage] = useState(
+    "Message was send, we will call you later"
+  );
   const handleSubmitForm = (data: AnyObject) => {
     const textMessage: string = `${data.name}, ${data.phone},${data.email},${data.message}`;
-    sendNotification(textMessage, "html");
+    sendNotification(textMessage, "html")
+      .then((res) => {
+        if (JSON.parse(res)["ok"]) {
+          setMessageIsSend(JSON.parse(res)["ok"]);
+        }
+        if (!JSON.parse(res)["ok"]) {
+          setMessageIsSend(JSON.parse(res)["ok"]);
+        }
+      })
+      .catch(() => {
+        setMessage("Error, please try again");
+      });
   };
 
   return (
     <div className={style.Form} data-aos="fade-up">
-      <form
-        className={style.form_container}
-        onSubmit={handleSubmit((data) => handleSubmitForm(data))}
-      >
-        <input
-          type="text"
-          id="name"
-          {...register("name", {
-            required: "Name is required",
-            minLength: { value: 3, message: "Min lenght is 3" },
-          })}
-          style={{ borderColor: errors.name?.message ? "#ff9a9a" : "#bef0e4" }}
-          placeholder={t("Your name")}
-        />
-        <span className={style.errorMessage}>{errors.name?.message}</span>
+      {!messageIsSend ? (
+        <div>{message}</div>
+      ) : (
+        <form
+          className={style.form_container}
+          onSubmit={handleSubmit((data) => handleSubmitForm(data))}
+          style={{ display: "block" }}
+        >
+          <input
+            type="text"
+            id="name"
+            {...register("name", {
+              required: "Name is required",
+              minLength: { value: 3, message: "Min lenght is 3" },
+            })}
+            style={{
+              borderColor: errors.name?.message ? "#ff9a9a" : "#bef0e4",
+            }}
+            placeholder={t("Your name")}
+          />
+          <span className={style.errorMessage}>{errors.name?.message}</span>
 
-        <input
-          type="email"
-          id="email"
-          {...register("email", {
-            required: "Email Address is required",
-            pattern:
-              // eslint-disable-next-line no-useless-escape
-              /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-          })}
-          style={{
-            borderColor:
-              errors.email?.type || errors.email?.message
-                ? "#ff9a9a"
-                : "#bef0e4",
-          }}
-          placeholder={t("Your email")}
-        />
-        <span className={style.errorMessage}>{errors.email?.message}</span>
-        {errors.email?.type && !errors.email?.message ? (
-          <span className={style.errorMessage}>Email is not correct</span>
-        ) : (
-          ""
-        )}
-        <input
-          type="tel"
-          id="phone"
-          {...register("phone", { required: "Phone is required" })}
-          placeholder={t("Your phone")}
-          style={{ borderColor: errors.phone?.message ? "#ff9a9a" : "#bef0e4" }}
-        />
-        <span className={style.errorMessage}>{errors.phone?.message}</span>
-        <textarea
-          id="message"
-          {...register("message")}
-          placeholder={t("Message")}
-        />
+          <input
+            type="email"
+            id="email"
+            {...register("email", {
+              required: "Email Address is required",
+              pattern:
+                // eslint-disable-next-line no-useless-escape
+                /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            })}
+            style={{
+              borderColor:
+                errors.email?.type || errors.email?.message
+                  ? "#ff9a9a"
+                  : "#bef0e4",
+            }}
+            placeholder={t("Your email")}
+          />
+          <span className={style.errorMessage}>{errors.email?.message}</span>
+          {errors.email?.type && !errors.email?.message ? (
+            <span className={style.errorMessage}>Email is not correct</span>
+          ) : (
+            ""
+          )}
+          <input
+            type="tel"
+            id="phone"
+            {...register("phone", { required: "Phone is required" })}
+            placeholder={t("Your phone")}
+            style={{
+              borderColor: errors.phone?.message ? "#ff9a9a" : "#bef0e4",
+            }}
+          />
+          <span className={style.errorMessage}>{errors.phone?.message}</span>
+          <textarea
+            id="message"
+            {...register("message")}
+            placeholder={t("Message")}
+          />
 
-        <div className={style.button}>
-          <button
-            className={style.animatedButton}
-            disabled={Object.keys(errors).length !== 0}
-          >
-            {t("Send Message")}
-          </button>
-        </div>
-      </form>
+          <div className={style.button}>
+            <button
+              className={style.animatedButton}
+              disabled={Object.keys(errors).length !== 0}
+            >
+              {t("Send Message")}
+            </button>
+          </div>
+        </form>
+      )}
     </div>
   );
 };

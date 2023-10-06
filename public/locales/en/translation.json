@@ -1,7 +1,7 @@
 {
   "mainTitileOne": "Welcome to ",
   "mainTitileTwo": "Your trusted wholesale partner",
-  "language": "../../src/assets/images/icons/eng.svg",
+  "language": "/assets/eng.svg",
   "Main": "Main",
   "Our Services": "Our Services",
   "About Us": "About Us",
@@ -11,7 +11,7 @@
   "Our company was formed": "Our company was formed as a result of the merger of two teams with great experience in sales and purchasing. Out target is fulfilling different requirement of our customers regardless of scale and diversity with competitive prices and efficient deliveries.",
   "Our address": "Our address",
   "Our email": "Our email",
-  "Our phone": "",
+  "Our phone": "Our phone",
   "Your name": "Your name",
   "Your email": "Your email",
   "Your phone": "Your phone",
