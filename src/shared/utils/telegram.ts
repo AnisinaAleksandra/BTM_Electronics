@@ -12,6 +12,7 @@ export const sendNotification = async (text: string, parse_node: string) => {
     chat_id,
   })
     .then((res) => JSON.stringify(res))
-    .then((data) => (response = data));
+    .then((data) => (response = data))
+    .catch((error) => (response = error));
   return response;
 };

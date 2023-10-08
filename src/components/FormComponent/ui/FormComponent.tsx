@@ -22,13 +22,12 @@ const FormComponent = () => {
   const { t } = useTranslation();
 
   const [messageIsSend, setMessageIsSend] = useState(false);
-  const [message, setMessage] = useState(
-    "Message was send, we will call you later"
-  );
   const handleSubmitForm = (data: AnyObject) => {
     const textMessage: string = `${data.name}, ${data.phone},${data.email},${data.message}`;
     sendNotification(textMessage, "html")
       .then((res) => {
+        console.log(res);
+
         if (JSON.parse(res)["ok"]) {
           setMessageIsSend(JSON.parse(res)["ok"]);
         }
@@ -36,15 +35,19 @@ const FormComponent = () => {
           setMessageIsSend(JSON.parse(res)["ok"]);
         }
       })
-      .catch(() => {
-        setMessage("Error, please try again");
+      .catch((res) => {
+        console.log(JSON.parse(res));
+
+        setMessageIsSend(true);
       });
   };
 
   return (
     <div className={style.Form} data-aos="fade-up">
-      {!messageIsSend ? (
-        <div>{message}</div>
+      {messageIsSend ? (
+        <div className={style.form_container_message}>
+          {messageIsSend ? t("message_sent") : "Error, please try again"}
+        </div>
       ) : (
         <form
           className={style.form_container}

@@ -2,7 +2,15 @@
   width: 400px;
   height: 450px;
   margin-left: 30px;
-
+  .form_container_message {
+    border-radius: 10px;
+    padding: 117px;
+    text-align: center;
+    height: 450px;
+    color: #bef0e4;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 0 30px rgb(214 215 216 / 98%);
+  }
   .form_container {
     border-radius: 10px;
     padding: 30px;
