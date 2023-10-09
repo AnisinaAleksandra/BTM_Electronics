@@ -54,6 +54,8 @@ const FormComponent = () => {
           onSubmit={handleSubmit((data) => handleSubmitForm(data))}
           style={{ display: "block" }}
         >
+          <div className={style.form_title}>{t("Contact Us")}</div>
+
           <input
             type="text"
             id="name"

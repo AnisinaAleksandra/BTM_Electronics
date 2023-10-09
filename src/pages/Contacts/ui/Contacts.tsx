@@ -10,7 +10,7 @@ const Contacts = () => {
   const { t } = useTranslation();
   return (
     <div className={style.Contacts} id="contacts">
-      <div className={style.title}>{t("Contact Us")}</div>
+      <div className={style.title}>{t("Contacts")}</div>
       <div className={style.info_cards_list}>
         <div className={style.info_card}>
           <div className={style.icon}>
